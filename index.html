@@ -1,0 +1,452 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ECO QUEST | 5 ภารกิจสื่อโต้ตอบ ม.3</title><style>
+:root{--navy:#103b38;--green:#13866c;--mint:#e5f6ef;--orange:#f59e44;--red:#d94d4d;--ink:#1c4140;--light:#f4faf8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(140deg,#e0f6eb,#eff7fc 58%,#fff6e5);color:var(--ink);font:16px/1.65 system-ui,'Noto Sans Thai',Tahoma,sans-serif}main{max-width:1120px;padding:16px;margin:auto}header{background:linear-gradient(115deg,#103e3a,#127a65);color:#fff;border-radius:22px;padding:22px 25px;box-shadow:0 10px 24px #205c4720}h1{font-size:clamp(24px,4vw,38px);line-height:1.25;margin:4px 0}h2{margin:0 0 10px;font-size:clamp(21px,3vw,27px)}h3{margin:0 0 8px}p{margin:8px 0}header p{color:#d9fff1}.hud{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.chip{background:#fff;border:1px solid #d8ebe4;border-radius:999px;padding:8px 13px;font-weight:750}.shell{background:#ffffffed;border:1px solid #d5e8df;border-radius:22px;padding:clamp(16px,3vw,26px);box-shadow:0 9px 28px #1a524311}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:15px 0}.step{border:1px solid #cce4d8;border-radius:12px;background:white;color:#285a51;padding:10px 6px;font-size:13px}.step.active{background:#126e5b;color:white}.step:disabled{opacity:.45;cursor:not-allowed}.step.done{background:#dff5e9;color:#135b45}.stage{display:none}.stage.active{display:block}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:#f4faf7;border:1px solid #d9ebe2;border-radius:16px;padding:16px}.controls label{font-weight:750;display:flex;justify-content:space-between;gap:10px}.controls input[type=range]{width:100%;accent-color:#119875;margin:12px 0 18px;cursor:pointer}button{font:inherit;cursor:pointer;border:0;background:#14836b;color:#fff;border-radius:12px;padding:10px 15px;font-weight:750}button:hover{filter:brightness(.96)}button:disabled{opacity:.45;cursor:not-allowed}.secondary{background:#dcefe7;color:#1b6353}.warning{background:#d98438}.action{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.meter{height:18px;border-radius:999px;background:#d6e8df;overflow:hidden;margin:5px 0 10px}.meter>div{height:100%;width:0;transition:width .3s;background:linear-gradient(90deg,#22c899,#118169)}.toxic>div{background:linear-gradient(90deg,#fac66b,#e15c44)}.metric{display:flex;justify-content:space-between;align-items:center;font-size:14px;gap:9px}.chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.node{background:white;border-radius:14px;text-align:center;padding:12px 5px;border:2px solid #d9e9e1}.node .emoji{font-size:clamp(28px,4vw,42px)}.node b{display:block;font-size:13px}.node small{display:block;color:#55736b;font-size:11px}.big{font-size:29px;font-weight:850;color:#10745d}.callout{padding:13px 15px;background:#fff4df;border-radius:13px;margin:12px 0}.feedback{padding:12px 15px;background:#e3f4ef;border-radius:12px;margin-top:12px;display:none}.feedback.show{display:block}.feedback.bad{background:#fff0e8}.bank{display:flex;gap:10px;flex-wrap:wrap;min-height:90px}.token{background:#fff;border:2px solid #b8d9cd;color:#214941;border-radius:13px;min-width:98px;padding:10px;touch-action:manipulation}.token.selected{border-color:#e58a22;background:#fff3df}.token:disabled{opacity:.38}.slots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}.slot{min-height:110px;border:2px dashed #9acdbb;border-radius:14px;background:#f5fffa;display:grid;place-content:center;text-align:center;padding:8px}.slot.filled{border-style:solid;background:#e2f5eb}.slot .emoji{font-size:30px}.slot button{background:none;color:#24493e;padding:0}.key{color:#557269;font-size:13px}.species{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.species .panel{text-align:center;padding:11px 4px}.species .emoji{font-size:30px}.species b{display:block;font-size:12px}.option{display:flex;align-items:flex-start;gap:7px;padding:10px;margin:8px 0;border:1px solid #d0e5dc;border-radius:11px;background:#fff;cursor:pointer}.option:has(input:checked){border-color:#109272;background:#e5f6ef}.quizq{padding:16px 0;border-bottom:1px solid #dfebe5}.quizq strong{display:block}.subtle{color:#5e7770;font-size:13px}.hidden{display:none!important}.scenario{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.scenario button{min-height:94px;background:#eef8f3;color:#205a4c;border:2px solid #b9dcce}.scenario button.picked{background:#13755d;color:white}.statboxes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.statbox{text-align:center;background:#fff;border-radius:12px;padding:10px}.statbox b{display:block;font-size:20px}.progress{height:10px;background:#cfe9dc;border-radius:30px;overflow:hidden;margin:10px 0}.progress div{width:0%;height:100%;background:#f2af45;transition:width .25s}.finish{text-align:center;padding:22px 0}.finish .medal{font-size:65px}footer{font-size:12px;color:#668077;padding:18px 5px}@media(max-width:680px){.grid{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.chain{gap:4px}.node{padding:8px 2px}.node b,.node small{font-size:10px}.slots{gap:5px}.slot{padding:3px;min-height:100px}.scenario{grid-template-columns:1fr}.statboxes{grid-template-columns:repeat(3,1fr)}main{padding:9px}header{padding:16px}.shell{padding:14px}}
+.quiz-diagram{background:#f0f8f2;border:1px solid #b5d8c4;border-radius:14px;padding:14px;margin:12px 0;line-height:1.9}.quiz-diagram div{margin:8px 0;font-size:1.05em}.quiz-diagram small{color:#517668}
+.web-board{position:relative;aspect-ratio:800/510;width:100%;background:linear-gradient(180deg,#eaf8ff,#eef9ec);border:2px solid #add6cc;border-radius:18px;overflow:hidden;margin-top:16px;touch-action:manipulation}
+.web-arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.web-node{position:absolute;transform:translate(-50%,-50%);width:22%;min-height:13%;border:2px dashed #60a38d;border-radius:13px;background:#ffffffef;color:#184c42;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4px 2px;font-size:clamp(9px,1.4vw,15px);line-height:1.2;box-shadow:0 4px 12px #173f3420}
+.web-node.filled{border-style:solid;border-color:#15876e;background:#fff}.web-node.selected{outline:4px solid #ffa835}.web-emoji{font-size:clamp(19px,3.5vw,35px);line-height:1.15}.web-bank{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.web-token{background:white;border:2px solid #acd4c6;border-radius:13px;color:#225649;min-width:93px;flex:1;padding:8px}.web-token.selected{background:#fff2ce;border-color:#e99921;color:#5b410d}.web-token .web-emoji{display:block}.web-guide{background:#e8f6f0;padding:12px;border-radius:12px;margin:10px 0}.web-node:focus-visible,.web-token:focus-visible{outline:4px solid #f1a52d;outline-offset:2px}
+@media(max-width:650px){.steps{grid-template-columns:repeat(3,1fr)}.web-node{width:24%;min-height:17%;border-radius:8px;font-size:9px;padding:2px 0}.web-emoji{font-size:21px}.web-token{min-width:73px;font-size:12px}.web-board{border-radius:10px}}
+
+/* VR drag-and-drop scenes for stage 2 and 5 */
+.vr-panel{background:linear-gradient(180deg,#dff8f1,#f4fffb 55%,#e8f4ff);border:1px solid #bfe2d8;border-radius:22px;padding:14px;box-shadow:inset 0 0 0 1px #ffffff90,0 12px 30px #1f5d4e12}
+.vr-topbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;background:rgba(255,255,255,.55);backdrop-filter:blur(8px);padding:10px 12px;border-radius:14px;color:#1d5b4c;font-size:14px;margin-bottom:12px}
+.vr-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#ffffffd0;border:1px solid #cbe5db;font-weight:700}
+.vr-caption{margin:10px 0 6px;font-weight:800;color:#16463d}.vr-help{font-size:13px;color:#496c64}
+.vr-bank{min-height:92px;padding:10px;border-radius:16px;background:rgba(255,255,255,.5);border:1px solid #d7ece5;backdrop-filter:blur(8px)}
+.vr-chain-board,.vr-web-board{position:relative;overflow:hidden;border:2px solid #b3ddd3;border-radius:24px;box-shadow:inset 0 0 0 2px #ffffff90, 0 10px 26px #1f51431a}
+.vr-chain-board{aspect-ratio:900/360;margin-top:12px;background:linear-gradient(180deg,#b8ebff 0%,#daf7ff 32%,#c9f1d3 33%,#99d67e 72%,#79b55f 100%)}
+.vr-web-board{background:linear-gradient(180deg,#bcefff 0%,#ddf8ff 28%,#d8f4e6 29%,#9bd39c 68%,#78a96f 100%)}
+.vr-chain-board::before,.vr-web-board::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 14% 16%,#ffffffb8 0 6%,transparent 7%),radial-gradient(circle at 84% 14%,#ffffffb5 0 5%,transparent 6%),radial-gradient(circle at 22% 25%,#ffffff60 0 12%,transparent 13%),radial-gradient(circle at 76% 20%,#ffffff55 0 9%,transparent 10%),linear-gradient(transparent 70%,#6caa5b 70%)}
+.vr-chain-board::after{content:'';position:absolute;left:-4%;right:-4%;bottom:-8%;height:42%;background:radial-gradient(circle at 18% 28%,#4f8d3d 0 22%,transparent 23%),radial-gradient(circle at 55% 18%,#5d9947 0 25%,transparent 26%),radial-gradient(circle at 83% 30%,#4c853a 0 20%,transparent 21%),linear-gradient(180deg,#94cf71,#73ad59);opacity:.95}
+.vr-web-board::after{content:'';position:absolute;left:-4%;right:-4%;bottom:-6%;height:46%;background:radial-gradient(circle at 17% 82%,#69a455 0 16%,transparent 17%),radial-gradient(circle at 50% 80%,#7bb562 0 18%,transparent 19%),radial-gradient(circle at 83% 84%,#5e984c 0 15%,transparent 16%),linear-gradient(180deg,#a1d67e 0,#76ae60 60%,#6ea15a 100%)}
+.tree,.rock,.bush,.water-patch{position:absolute;z-index:0;opacity:.95;pointer-events:none}
+.tree{width:76px;height:116px;left:5%;bottom:16%}.tree::before{content:'';position:absolute;left:31px;bottom:0;width:14px;height:42px;background:#7b5132;border-radius:10px}.tree::after{content:'';position:absolute;left:0;top:0;width:76px;height:78px;background:radial-gradient(circle at 40% 40%,#67b04f 0 48%,#4e8e3e 49% 72%,transparent 73%);border-radius:50%}
+.tree.t2{left:auto;right:8%;bottom:18%;transform:scale(.88)}
+.bush{width:92px;height:48px;border-radius:40px;background:radial-gradient(circle at 35% 45%,#71b05a 0 32%,transparent 33%),radial-gradient(circle at 55% 35%,#5f9f4b 0 34%,transparent 35%),radial-gradient(circle at 76% 46%,#4d8d3e 0 30%,transparent 31%);bottom:10%;left:20%}.bush.b2{left:auto;right:20%;bottom:12%;transform:scale(.9)}
+.rock{width:68px;height:34px;border-radius:20px;background:linear-gradient(180deg,#b2c8c4,#8ea8a2);bottom:13%;left:42%}.water-patch{left:56%;bottom:8%;width:200px;height:76px;border-radius:50%;background:radial-gradient(ellipse at center,#8ce4ff 0,#74caec 40%,#68bcd5 70%,transparent 71%);opacity:.8}
+.vr-arrows,.web-arrows{position:absolute;inset:0;z-index:1;pointer-events:none}
+.vr-slots,.web-slots{position:absolute;inset:0;z-index:2}
+.vr-slot,.web-node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#173f37;background:rgba(255,255,255,.92);backdrop-filter:blur(5px);border:2px dashed #5d9f8b;border-radius:16px;box-shadow:0 10px 22px #11362d18;line-height:1.2;padding:5px 4px}
+.vr-slot{width:18%;min-height:25%}.vr-slot.filled,.web-node.filled{border-style:solid;border-color:#19826c;background:#fff}
+.vr-slot .emoji,.web-node .web-emoji{font-size:clamp(24px,3.6vw,34px)}
+.chain-label{font-size:11px;color:#487367;margin-top:3px}
+.token,.web-token{touch-action:none;user-select:none;-webkit-user-select:none;box-shadow:0 8px 18px #11392f14}
+.token{border-radius:16px;padding:12px 10px;min-width:104px;background:linear-gradient(180deg,#fff,#f1fbf6)}
+.web-token{padding:10px 8px;min-width:96px;background:linear-gradient(180deg,#fff,#f2fbf7)}
+.token.selected,.web-token.selected{transform:translateY(-2px) scale(1.02)}
+.drag-ghost{position:fixed;left:0;top:0;z-index:9999;pointer-events:none;transform:translate(-50%,-50%) scale(1.06);opacity:.96;box-shadow:0 18px 34px #193d351f}
+.drag-hover{outline:4px solid #ffb33f!important;outline-offset:2px}
+.vr-note{margin-top:10px;padding:10px 12px;border-radius:12px;background:#ffffffb5;border:1px solid #d6ece6;color:#31584f}
+@media(max-width:820px){.vr-slot{width:23%;min-height:24%}.vr-topbar{font-size:13px}.tree{transform:scale(.82);left:1%}.tree.t2{right:2%;transform:scale(.72)}.bush{left:13%}.water-patch{width:145px;height:58px;left:52%}}
+@media(max-width:650px){.vr-chain-board{aspect-ratio:900/430}.vr-slot{width:34%;min-height:20%;font-size:12px}.vr-slot .emoji{font-size:25px}.web-node{width:29%;min-height:14%;font-size:10px}.vr-bank{padding:8px}.token{min-width:86px;padding:10px 7px;font-size:13px}.web-token{min-width:78px;font-size:12px}.water-patch{width:118px;height:50px;left:50%}.bush{transform:scale(.85)}}
+
+/* Camera-based screen-space AR layer, with nature fallback */
+.ar-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:12px 0 8px}
+.ar-toolbar .ar-status{font-size:12px;padding:8px;border-radius:12px;background:#ffffffdb;color:#20594b;border:1px solid #d0e6dd}
+.ar-toolbar button{font-size:14px;padding:9px 12px}
+.ar-video{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#112a27;pointer-events:none}
+.ar-camera-tint{display:none;position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#90dbe744 0%,#baf6b522 42%,#558f4a36 100%);pointer-events:none}
+.ar-camera-on .ar-video,.ar-camera-on .ar-camera-tint{display:block}
+.ar-camera-on.vr-chain-board,.ar-camera-on.vr-web-board{background:#142e26}
+.ar-camera-on.vr-chain-board::before,.ar-camera-on.vr-chain-board::after,.ar-camera-on.vr-web-board::before,.ar-camera-on.vr-web-board::after{display:none}
+.ar-camera-on .tree,.ar-camera-on .bush,.ar-camera-on .rock,.ar-camera-on .water-patch{opacity:.3}
+.ar-camera-on .vr-slot,.ar-camera-on .web-node{background:#fafff4e8;border-color:#06b88d;box-shadow:0 4px 14px #001b1650}
+.ar-camera-on .vr-arrows g,.ar-camera-on .web-arrows g{stroke:#fffff1;filter:drop-shadow(0 2px 3px #06291b)}
+.ar-camera-on .vr-arrows marker path,.ar-camera-on .web-arrows marker path{fill:#fffff1}
+@media(max-width:600px){.ar-toolbar{gap:6px}.ar-toolbar button{font-size:12px;padding:9px}.ar-toolbar .ar-status{width:100%}}
+
+.difficulty-panel{background:#fff;border:1px solid #cee7da;border-radius:17px;padding:15px;margin:14px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}.difficulty-panel p{font-size:13px;color:#577167;margin:3px 0}.difficulty-options{display:flex;gap:7px;flex-wrap:wrap}.difficulty-option{background:#e4f5ed;color:#256b56;border:1px solid #bfded0;padding:9px 11px}.difficulty-option.active{background:#126e5b;color:white}.difficulty-info{flex-basis:100%;font-size:13px;color:#46675d}.compare-wrap{margin-top:16px;padding:13px;border-radius:16px;background:#fff;border:1px solid #d1e6da}.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.compare-row{display:flex;align-items:center;gap:7px;margin:12px 0;font-size:12px}.compare-row span{width:55px;flex-shrink:0}.compare-row em{font-style:normal;min-width:40px;text-align:right;font-variant-numeric:tabular-nums}.compare-track{flex:1;min-width:22px;background:#e8f1ea;height:14px;border-radius:9px;overflow:hidden}.compare-track i{height:100%;display:block;border-radius:9px;transition:width .2s}.energy-bar{background:#21a777}.toxin-bar{background:#e9994b}.compare-takeaway{padding:10px;background:#e8f7f0;border-radius:10px;margin-top:13px;font-size:13px}@media(max-width:620px){.compare-grid{grid-template-columns:1fr}.difficulty-options{width:100%}.difficulty-option{flex:1;font-size:12px}}
+
+.card-art{display:block;width:72px;height:72px;object-fit:contain;margin:0 auto 6px;filter:drop-shadow(0 8px 10px rgba(16,45,37,.16))}.slot-art{display:block;width:64px;height:64px;object-fit:contain;margin:0 auto 4px;filter:drop-shadow(0 8px 10px rgba(16,45,37,.14))}.web-slot-art{display:block;width:56px;height:56px;object-fit:contain;margin:0 auto 3px;filter:drop-shadow(0 8px 10px rgba(16,45,37,.14))}.token b,.web-token b,.vr-slot b,.web-node b{display:block}.token small,.web-token small,.vr-slot small,.web-node small{line-height:1.25}.token,.web-token{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center}.vr-slot,.web-node{overflow:hidden}.vr-slot small,.web-node small{padding:0 4px}@media(max-width:650px){.card-art{width:58px;height:58px}.slot-art{width:52px;height:52px}.web-slot-art{width:44px;height:44px}}
+
+/* ด่าน 2: แถบบัตรภาพอยู่ในฉากเดียวกับช่องวาง โดยลูกศรไม่ขยับ */
+#stage1 .vr-chain-board{aspect-ratio:900/560;min-height:400px;isolation:isolate}
+#stage1 .vr-arrows{z-index:1}
+#stage1 .vr-slots{z-index:2;pointer-events:none}
+#stage1 .vr-slots .vr-slot{pointer-events:auto;min-height:18%;width:19%;padding:3px 2px}
+#stage1 .scene-bank{position:absolute;left:3%;right:3%;bottom:3%;height:37%;min-height:142px;z-index:5;display:flex;flex-direction:column;gap:7px;padding:10px;border-radius:18px;background:rgba(240,255,248,.90);border:2px solid rgba(255,255,255,.75);backdrop-filter:blur(9px);box-shadow:0 8px 30px #0e473a40}
+#stage1 .scene-bank-title{display:flex;gap:7px;align-items:center;justify-content:space-between;font-weight:850;font-size:14px;color:#125846}
+#stage1 .scene-bank-title span{font-size:12px;font-weight:650;color:#397b65}
+#stage1 #bank{display:flex;align-items:stretch;justify-content:center;gap:8px;min-height:0;flex:1;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;padding:4px;background:transparent;border:0;backdrop-filter:none}
+#stage1 #bank .token{flex:1 0 0;min-width:92px;max-width:155px;min-height:0;padding:5px 3px;display:flex;justify-content:center;gap:1px;touch-action:none}
+#stage1 #bank .card-art{width:clamp(38px,7vw,63px);height:clamp(38px,7vw,63px);margin:0 auto}
+#stage1 #bank .token b{font-size:12px}
+#stage1 #bank .token small{font-size:10px}
+#stage1 .vr-slot .slot-art{width:clamp(35px,6vw,65px);height:clamp(35px,6vw,65px);margin-bottom:1px}
+@media(max-width:650px){#stage1 .vr-chain-board{aspect-ratio:auto;height:465px;min-height:465px}#stage1 .scene-bank{left:2%;right:2%;bottom:2%;height:37%;min-height:155px;padding:7px}#stage1 .scene-bank-title{font-size:12px}#stage1 .scene-bank-title span{font-size:10px}#stage1 #bank{justify-content:flex-start;gap:5px}#stage1 #bank .token{min-width:76px;max-width:none;padding:4px 2px}#stage1 #bank .card-art{width:50px;height:50px}#stage1 .vr-slots .vr-slot{width:25%;min-height:17%;font-size:10px}#stage1 .vr-slot .slot-art{width:42px;height:42px}}
+
+/* ด่าน 5: คลังอยู่ในฉากเดียวกัน โดยคง geometry ของลูกศรและช่องไว้ใน playfield */
+#stage4 .vr-web-board{aspect-ratio:auto;height:750px;min-height:750px;margin-top:12px;touch-action:none}
+#stage4 .web-playfield{position:absolute;left:0;top:0;width:100%;height:68%;z-index:3;pointer-events:none}
+#stage4 .web-playfield .web-arrows{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+#stage4 .web-playfield .web-slots{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+#stage4 .web-playfield .web-node{pointer-events:auto;min-height:15%;width:21%}
+#stage4 .web-scene-bank{position:absolute;left:2%;right:2%;bottom:2%;height:27%;z-index:6;display:flex;flex-direction:column;gap:6px;padding:10px;background:rgba(241,255,249,.94);border:2px solid rgba(255,255,255,.85);border-radius:18px;backdrop-filter:blur(8px);box-shadow:0 7px 22px #13402f45}
+#stage4 .scene-bank-title{display:flex;justify-content:space-between;gap:8px;color:#185846;font-weight:800;font-size:14px}
+#stage4 .scene-bank-title span{font-size:12px;font-weight:600;color:#387a66}
+#stage4 #webBank{display:flex;flex-wrap:nowrap;align-items:stretch;gap:7px;flex:1;min-height:0;overflow-x:auto;overflow-y:hidden;padding:5px 2px;background:transparent;border:0;scrollbar-width:thin;touch-action:pan-x}
+#stage4 #webBank .web-token{flex:0 0 98px;min-width:98px;max-width:112px;min-height:0;padding:5px 3px;display:flex;flex-direction:column;align-items:center;gap:1px;touch-action:none}
+#stage4 #webBank .card-art{width:61px;height:61px;margin:0 auto 2px}
+#stage4 #webBank .web-token b{font-size:12px}
+#stage4 #webBank .web-token small{font-size:10px}
+#stage4 .web-slot-art{width:clamp(36px,5vw,56px);height:clamp(36px,5vw,56px)}
+@media(max-width:650px){#stage4 .vr-web-board{height:690px;min-height:690px}#stage4 .web-playfield{height:68%}#stage4 .web-playfield .web-node{width:27%;min-height:13%;font-size:10px}#stage4 .web-scene-bank{height:28%;left:2%;right:2%;padding:7px}#stage4 .scene-bank-title{font-size:12px}#stage4 .scene-bank-title span{font-size:10px}#stage4 #webBank .web-token{flex:0 0 83px;min-width:83px;padding:3px 2px}#stage4 #webBank .card-art{width:49px;height:49px}#stage4 .web-slot-art{width:42px;height:42px}}
+</style><style>
+.sound-controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap;padding:11px 14px;background:#e6f7f0;border:1px solid #abdac9;border-radius:16px;margin:10px 0 15px;color:#185444}
+.sound-controls button{padding:8px 12px}.sound-controls label{font-size:13px;font-weight:750}.sound-controls input[type=range]{width:120px;accent-color:#118a70;cursor:pointer}
+.sound-controls .sound-note{font-size:12px;color:#507466}.sound-controls .sound-title{font-weight:850}
+
+.difficulty-panel{background:#fff;border:1px solid #cee7da;border-radius:17px;padding:15px;margin:14px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}.difficulty-panel p{font-size:13px;color:#577167;margin:3px 0}.difficulty-options{display:flex;gap:7px;flex-wrap:wrap}.difficulty-option{background:#e4f5ed;color:#256b56;border:1px solid #bfded0;padding:9px 11px}.difficulty-option.active{background:#126e5b;color:white}.difficulty-info{flex-basis:100%;font-size:13px;color:#46675d}.compare-wrap{margin-top:16px;padding:13px;border-radius:16px;background:#fff;border:1px solid #d1e6da}.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.compare-row{display:flex;align-items:center;gap:7px;margin:12px 0;font-size:12px}.compare-row span{width:55px;flex-shrink:0}.compare-row em{font-style:normal;min-width:40px;text-align:right;font-variant-numeric:tabular-nums}.compare-track{flex:1;min-width:22px;background:#e8f1ea;height:14px;border-radius:9px;overflow:hidden}.compare-track i{height:100%;display:block;border-radius:9px;transition:width .2s}.energy-bar{background:#21a777}.toxin-bar{background:#e9994b}.compare-takeaway{padding:10px;background:#e8f7f0;border-radius:10px;margin-top:13px;font-size:13px}@media(max-width:620px){.compare-grid{grid-template-columns:1fr}.difficulty-options{width:100%}.difficulty-option{flex:1;font-size:12px}}
+</style><style>
+/* MediaPipe Hand Landmarker controls and camera-backed screen-space AR */
+.mp-controls{margin:10px 0 12px;padding:12px;border-radius:16px;background:linear-gradient(120deg,#e6faf0,#e6f4ff);border:1px solid #b2ddce}
+.mp-mode-row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.mp-mode-row label{font-weight:800;font-size:14px}.mp-mode{flex:1;min-width:175px;max-width:360px;border:1px solid #77b7a2;border-radius:11px;padding:10px;background:#fff;color:#164a3d;font:inherit;font-size:14px}
+.mp-status{font-size:13px;margin-top:8px;color:#256353;line-height:1.55}.mp-status.error{color:#af4231}.mp-stop{font-size:12px;padding:8px 10px}
+.mp-dock{position:fixed;right:14px;bottom:14px;width:min(226px,42vw);z-index:900;border:2px solid #36b293;border-radius:15px;background:#082f2c;box-shadow:0 12px 28px #052d2850;overflow:hidden;display:none;pointer-events:none}
+.mp-dock.active{display:block}.mp-dock video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transform:scaleX(-1)}.mp-dock span{display:block;color:white;background:#11443cbf;font-size:11px;text-align:center;padding:4px}
+.mp-cursor{position:fixed;width:34px;height:34px;border:3px solid #fff;border-radius:50%;background:#09ac8988;box-shadow:0 0 0 3px #118568,0 7px 22px #081d176e;pointer-events:none;z-index:10001;left:0;top:0;transform:translate(-50%,-50%);display:none;transition:background .08s}
+.mp-cursor.active{display:block}.mp-cursor.pinched{background:#ffa735bb;box-shadow:0 0 0 6px #f8bb52b5,0 7px 24px #081d176e;transform:translate(-50%,-50%) scale(.78)}
+.mp-held{position:fixed;z-index:10000;pointer-events:none;display:none;transform:translate(-50%, -115%);background:#ffffffef;border:2px solid #e4a33a;border-radius:14px;box-shadow:0 12px 28px #132e2966;padding:5px;min-width:65px;text-align:center}
+.mp-held.active{display:block}.mp-held img{width:67px;height:67px;object-fit:contain;display:block}.mp-held span{font-weight:750;font-size:11px;color:#204739}
+.mp-target{outline:4px solid #edb145!important;outline-offset:2px;box-shadow:0 0 22px #ffc35e99!important}
+.mp-ar-mode{background:#113333!important}.mp-ar-mode::before,.mp-ar-mode::after{display:none!important}
+.mp-ar-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;display:none;transform:scaleX(-1);pointer-events:none}
+.mp-ar-mode>.mp-ar-video{display:block}.mp-ar-mode .tree,.mp-ar-mode .bush,.mp-ar-mode .rock,.mp-ar-mode .water-patch{opacity:.18}
+.mp-ar-mode .vr-slot,.mp-ar-mode .web-node{background:#ffffffe9;border-color:#19a985}.mp-ar-mode .vr-arrows g,.mp-ar-mode .web-arrows g{stroke:#ffffff;filter:drop-shadow(0 2px 3px #052a1b)}
+@media(max-width:650px){.mp-dock{width:118px;bottom:8px;right:8px}.mp-dock span{font-size:9px}.mp-held img{height:53px;width:53px}.mp-cursor{width:28px;height:28px}.mp-controls{padding:9px}}
+
+.mp-pinchmeter{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:9px;font-size:13px}.mp-indicator{padding:5px 10px;background:white;border-radius:99px;border:1px solid #b9dacb;font-weight:750}.mp-indicator.detected{background:#d9f8df;color:#176b42}.mp-indicator.grabbing{background:#ffe6b8;color:#80510b}.mp-ratio{background:#fff9;padding:5px 9px;border-radius:9px}.mp-dock canvas{position:absolute;inset:0;width:100%;height:calc(100% - 25px);pointer-events:none;transform:scaleX(-1)}.mp-test:focus-visible{outline:3px solid orange}.mp-mode-row{row-gap:8px}
+</style></head><body><main><header><div>🌎 SCIENCE ADVENTURE • มัธยมศึกษาปีที่ 3</div><h1>🌿 ECO QUEST: 5 ภารกิจพิทักษ์ระบบนิเวศ</h1><p>ทดลองจริง • แตะจัดเรียง • ควบคุมตัวแปร • แก้สถานการณ์จำลอง เพื่อแยกความต่างระหว่างการถ่ายทอดพลังงานกับการสะสมสารพิษ</p></header><div class="sound-controls" aria-label="ตั้งค่าเสียงเกม"><span class="sound-title">🎧 เสียงเกม</span><button id="soundToggle" type="button" aria-pressed="false">🔊 เปิดเสียง</button><button id="musicToggle" type="button" class="secondary" aria-pressed="false">🎵 เปิดดนตรี</button><label for="soundVolume">ความดัง</label><input type="range" id="soundVolume" min="0" max="100" value="42" aria-label="ระดับเสียง"><span id="soundPercent">42%</span><span class="sound-note" id="soundStatus">เริ่มเกมแบบเงียบ • กดเปิดเสียงเพื่อใช้งาน</span></div><section class="difficulty-panel" aria-label="ระดับความยาก"><div><strong>🎮 เลือกระดับการเรียนรู้</strong><p>โหมดฝึกหัดเหมาะสำหรับลองเล่นครั้งแรก ส่วนโหมดนักสำรวจเน้นการวิเคราะห์ด้วยตัวเอง</p></div><div class="difficulty-options"><button type="button" class="difficulty-option" data-difficulty="easy">🌱 ฝึกหัด</button><button type="button" class="difficulty-option" data-difficulty="normal">🌿 นักสำรวจ</button><button type="button" class="difficulty-option" data-difficulty="hard">🔥 ผู้พิทักษ์</button></div><span id="difficultyInfo" class="difficulty-info" role="status"></span></section><div class="hud"><div class="chip">⭐ คะแนน <span id="score">0</span></div><div class="chip">❤️ หัวใจ <span id="hearts">♥♥♥</span></div><div class="chip">🏁 ภารกิจ <span id="mission">1/5</span></div><div class="chip">🎯 สำเร็จ <span id="completed">0</span>/5</div></div><nav class="steps" aria-label="เลือกภารกิจ"><button class="step active" data-go="0">⚡ 1 พลังงาน</button><button class="step" data-go="1" disabled>🔗 2 ห่วงโซ่</button><button class="step" data-go="2" disabled>☣️ 3 สารพิษ</button><button class="step" data-go="3" disabled>🛟 4 ฟื้นฟู</button><button class="step" data-go="4" disabled>🕸️ 5 สายใยอาหาร</button></nav><div class="shell">
+<section class="stage active" id="stage0"><h2>⚡ ภารกิจ 1: ห้องทดลองพลังงาน</h2><p>ปรับพลังงานเริ่มต้นและ <b>อัตราการส่งต่อพลังงาน</b> เพื่อช่วยให้งูได้รับพลังงานตามเป้าหมาย สังเกตการเปลี่ยนแปลงได้ทันที</p><div class="grid"><div class="panel controls"><label>พลังงานที่พืชสะสม <output id="eStartLabel"></output></label><input id="eStart" type="range" min="1000" max="20000" step="1000" value="10000"><label>อัตราการส่งต่อแต่ละระดับ <output id="eRateLabel"></output></label><input id="eRate" type="range" min="5" max="20" step="1" value="10"><div class="callout"><b>โจทย์ทดลอง:</b> ตั้งค่าให้พลังงานที่งูได้รับอยู่ระหว่าง <b>15–25 kJ</b> โดยมีอัตราการส่งต่อ <b>10%</b> ต่อระดับ</div><button id="check1">ตรวจผลการทดลอง</button><button class="secondary" id="reset1">↺ ตั้งค่าใหม่</button><div class="feedback" id="fb1" role="status"></div></div><div class="panel"><h3>แผนภาพถ่ายทอดพลังงาน</h3><div class="chain" id="energyChain"></div><div class="subtle">พลังงานในแต่ละระดับลดลง เพราะถูกใช้ในการดำรงชีวิตและสูญเสียออกจากระบบการกินในรูปความร้อน</div><div class="callout">🔎 <b>วิเคราะห์:</b> ถ้าอัตราส่งต่อสูงขึ้น พลังงานที่ผู้บริโภคระดับบนเปลี่ยนอย่างไร?</div></div></div></section>
+<section class="stage" id="stage1"><h2>📱 ภารกิจ 2: AR หยิบวางห่วงโซ่อาหาร</h2><p>เปิดกล้องเพื่อแสดงภาพจริงเป็นพื้นหลัง AR (หรือใช้ฉากระบบนิเวศจำลอง) แล้วใช้ <b>นิ้วหยิบการ์ดสิ่งมีชีวิตมาวาง</b> ตามทิศทางลูกศรคงที่ จาก <b>ผู้ผลิต → ผู้บริโภคอันดับสูงสุด</b></p><div class="vr-panel"><div class="vr-topbar"><span class="vr-pill">🖐️ โหมดหยิบวางด้วยนิ้วหรือเมาส์</span><span class="vr-pill">➡️ ลูกศรคงที่ ไม่เปลี่ยนตำแหน่ง</span></div><div class="vr-caption">ฉาก AR ระบบนิเวศ พร้อมคลังบัตร 3D ภายในฉาก</div><div class="vr-help">หยิบบัตรภาพจากแถบด้านล่างของฉาก แล้วลากขึ้นไปวางในช่องด้านบน หรือแตะบัตรแล้วแตะช่องก็ได้</div><div class="ar-toolbar"><button type="button" class="ar-camera-btn" data-ar-toggle>📷 เปิดกล้อง AR</button><button type="button" class="secondary" data-ar-facing>🔄 สลับกล้อง</button><span class="ar-status" role="status" aria-live="polite">🌳 โหมดฉากระบบนิเวศจำลอง</span></div><section class="mp-controls" aria-label="ควบคุม MediaPipe"><div class="mp-mode-row"><label for="mpMode1">🎥 วิธีควบคุม</label><select id="mpMode1" class="mp-mode" data-stage="1"><option value="touch">👆 สัมผัส / เมาส์</option><option value="hand">🤏 Hand Tracking (ฉากธรรมชาติ)</option><option value="arhand">📷 AR + Hand Tracking</option></select><button type="button" class="mp-test secondary">🧪 ทดสอบกล้อง</button><button type="button" class="mp-stop secondary">หยุดกล้องมือ</button></div><div class="mp-pinchmeter"><span class="mp-indicator">⚪ ยังไม่พบมือ</span><span class="mp-ratio">สถานะการจีบ: —</span></div><div class="mp-status" role="status" aria-live="polite">เลือกโหมดเพื่อเริ่มติดตามมือ • จีบนิ้วหยิบ แล้วคลายนิ้วเพื่อวาง</div></section><div class="vr-chain-board" id="chainBoard"><video class="ar-video" autoplay muted playsinline aria-hidden="true"></video><div class="ar-camera-tint" aria-hidden="true"></div><div class="tree"></div><div class="tree t2"></div><div class="bush"></div><div class="bush b2"></div><div class="rock"></div><div class="water-patch"></div><svg class="vr-arrows" viewBox="0 0 900 560" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="chainArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#18846e"/></marker></defs><g fill="none" stroke="#18846e" stroke-width="6" stroke-linecap="round" marker-end="url(#chainArrow)"><path d="M168 190 L340 190"/><path d="M392 190 L564 190"/><path d="M616 190 L788 190"/></g></svg><div class="slots vr-slots" id="slots"></div><div class="scene-bank" id="sceneBank"><div class="scene-bank-title">🧩 คลังบัตรภาพสิ่งมีชีวิต 3D <span>หยิบจากตรงนี้ ↑</span></div><div class="bank vr-bank" id="bank"></div></div></div><div class="action"><button id="check2">ตรวจห่วงโซ่อาหาร</button><button id="reset2" class="secondary">↺ เริ่มจัดใหม่</button></div><button type="button" id="hint2" class="secondary">💡 ขอคำใบ้ (<span id="hint2Left">2</span>)</button><div class="feedback" id="fb2" role="status"></div><p class="vr-note">💡 แนวคิด: ลูกศรในห่วงโซ่อาหารบอกทิศทางการถ่ายทอดพลังงานจากสิ่งที่ถูกกินไปยังผู้กิน</p></div></section>
+<section class="stage" id="stage2"><h2>☣️ ภารกิจ 3: ห้องสืบสวนสารพิษ</h2><p>ทดลองปรับความเข้มข้นสารพิษเริ่มต้นและตัวคูณการเพิ่มความเข้มข้น เพื่อดูว่าผู้บริโภคระดับสูงได้รับสารพิษมากเพียงใดใน <b>แบบจำลองสมมติ</b></p><div class="grid"><div class="panel controls"><label>สารพิษเริ่มต้นในพืช <output id="pStartLabel"></output></label><input id="pStart" type="range" min="0" max="4" step="0.5" value="1"><label>ตัวคูณความเข้มข้นต่อระดับ <output id="pMultLabel"></output></label><input id="pMult" type="range" min="1" max="5" step="1" value="3"><div class="callout"><b>โจทย์:</b> ปรับให้ความเข้มข้นสารพิษที่งู <b>ไม่เกิน 8 หน่วย</b> โดยใช้ตัวคูณ <b>2 เท่า</b> ต่อระดับ และตั้งค่าสารพิษเริ่มต้นให้ <b>มากกว่า 0</b></div><button id="check3">ตรวจแผนลดสารพิษ</button><button id="reset3" class="secondary">↺ ตั้งค่าใหม่</button><div class="feedback" id="fb3" role="status"></div></div><div class="panel"><div class="species" id="toxinChain"></div><div class="callout"><b>สังเกต:</b> ที่งูมีความเข้มข้นสารพิษเท่าใด? <div class="big" id="predatorToxin"></div></div><p class="subtle">เป็นการจำลองสารพิษชนิดที่คงทนและสะสมได้ โดยใช้ตัวคูณสมมติ ไม่ใช่ข้อเท็จจริงว่าสารพิษทุกชนิดเพิ่มขึ้นตามห่วงโซ่อาหาร</p><div class="compare-wrap"><h3>🔍 เปรียบเทียบผลในห่วงโซ่อาหารเดียวกัน</h3><p class="subtle">ความยาวแท่งใช้สเกลเชิงภาพเพื่อให้เห็นค่าทุกระดับ ตัวเลขกำกับเป็นค่าของแบบจำลอง</p><div class="compare-grid"><div><b>⚡ พลังงานลดลง</b><div id="compareEnergy"></div></div><div><b>☣️ สารพิษบางชนิดเข้มข้นขึ้น</b><div id="compareToxin"></div></div></div><div class="compare-takeaway">พลังงานใช้ไปในการดำรงชีวิตและถ่ายทอดได้เพียงบางส่วน แต่สารพิษคงทนบางชนิดอาจสะสมผ่านอาหารได้</div></div></div></div></section>
+<section class="stage" id="stage3"><h2>🛟 ภารกิจ 4: ผู้จัดการวิกฤตระบบนิเวศ</h2><p>จำลองการจัดการแหล่งน้ำปนเปื้อน! กดเลือกมาตรการ <b>2 ครั้ง</b> เพื่อให้ระดับสารพิษลดลงโดยยังรักษาทรัพยากรของระบบนิเวศไว้</p><div class="panel"><div class="statboxes"><div class="statbox">☣️ มลพิษ<b id="crisisP">80</b><small>/100</small></div><div class="statbox">🌿 ความสมบูรณ์<b id="crisisH">50</b><small>/100</small></div><div class="statbox">💰 งบคงเหลือ<b id="crisisB">100</b><small>หน่วย</small></div></div><p id="roundLabel"><b>รอบที่ 1 จาก 2</b> • เลือกมาตรการที่เหมาะสม</p><div class="scenario" id="actions"><button data-action="source">🏭 ควบคุมการปล่อยสารพิษจากแหล่งกำเนิด<small> ลดมลพิษ 35 • เพิ่มสุขภาพ 10 • ใช้งบ 50</small></button><button data-action="clean">💧 ฟื้นฟูและบำบัดน้ำปนเปื้อน<small> ลดมลพิษ 25 • เพิ่มสุขภาพ 20 • ใช้งบ 45</small></button><button data-action="stock">🐟 ปล่อยสัตว์ผู้ล่าเพิ่มทันที<small> มลพิษเท่าเดิม • ลดสุขภาพ 10 • ใช้งบ 20</small></button></div><div class="progress"><div id="roundProgress"></div></div><div class="feedback" id="fb4" role="status"></div><div class="action"><button id="check4" disabled>ประเมินสถานการณ์</button><button class="secondary" id="reset4">↺ เริ่มสถานการณ์ใหม่</button></div><p class="subtle">เป้าหมาย: มลพิษ ≤ 30, ความสมบูรณ์ ≥ 70 และงบไม่ติดลบ • แบบจำลองใช้ค่าตัวเลขเพื่อฝึกตัดสินใจ ไม่ใช่ค่ามาตรฐานคุณภาพน้ำจริง</p></div></section>
+
+<section class="stage" id="stage4"><h2>📱 ภารกิจ 5: AR สร้างสายใยอาหาร</h2>
+<p>ใช้ <b>นิ้วหยิบภาพสิ่งมีชีวิตมาวาง</b> ลงในช่องของฉาก AR ระบบนิเวศ โดย <b>ลูกศรอยู่ตำแหน่งเดิมตลอด</b> และชี้จาก <b>สิ่งที่ถูกกิน → ผู้กิน</b></p>
+<div class="vr-panel"><div class="vr-topbar"><span class="vr-pill">🌿 ธีมระบบนิเวศบก-น้ำ</span><span class="vr-pill">🕸️ สร้างสายใยอาหารจากลูกศรคงที่</span></div>
+<div class="web-guide"><b>ภารกิจ:</b> วางสิ่งมีชีวิต 7 ชนิดลงในช่องที่ถูกต้องให้ครบทั้งสองเส้นทาง แล้วรวมกันเป็นสายใยอาหารเดียวกัน</div>
+<div class="vr-help">คลังบัตรภาพ 3D อยู่ภายในฉากด้านล่าง หยิบหรือจีบนิ้วลากขึ้นไปวางตามลูกศรที่อยู่กับที่</div>
+<div class="vr-caption">ฉาก AR ระบบนิเวศและคลังบัตรภาพ 3D</div>
+<div class="ar-toolbar"><button type="button" class="ar-camera-btn" data-ar-toggle>📷 เปิดกล้อง AR</button><button type="button" class="secondary" data-ar-facing>🔄 สลับกล้อง</button><span class="ar-status" role="status" aria-live="polite">🌳 โหมดฉากระบบนิเวศจำลอง</span></div><section class="mp-controls" aria-label="ควบคุม MediaPipe"><div class="mp-mode-row"><label for="mpMode4">🎥 วิธีควบคุม</label><select id="mpMode4" class="mp-mode" data-stage="4"><option value="touch">👆 สัมผัส / เมาส์</option><option value="hand">🤏 Hand Tracking (ฉากธรรมชาติ)</option><option value="arhand">📷 AR + Hand Tracking</option></select><button type="button" class="mp-test secondary">🧪 ทดสอบกล้อง</button><button type="button" class="mp-stop secondary">หยุดกล้องมือ</button></div><div class="mp-pinchmeter"><span class="mp-indicator">⚪ ยังไม่พบมือ</span><span class="mp-ratio">สถานะการจีบ: —</span></div><div class="mp-status" role="status" aria-live="polite">เลือกโหมดเพื่อเริ่มติดตามมือ • จีบนิ้วหยิบ แล้วคลายนิ้วเพื่อวาง</div></section><div class="web-board vr-web-board" id="webBoard" aria-label="ผังสายใยอาหารที่ลูกศรมีตำแหน่งคงที่"><video class="ar-video" autoplay muted playsinline aria-hidden="true"></video><div class="ar-camera-tint" aria-hidden="true"></div><div class="tree"></div><div class="tree t2"></div><div class="bush"></div><div class="bush b2"></div><div class="rock"></div><div class="water-patch"></div>
+<div class="web-playfield"><svg class="web-arrows" viewBox="0 0 800 510" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="fixedArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#18846e"/></marker></defs><g fill="none" stroke="#18846e" stroke-width="5" stroke-linecap="round" marker-end="url(#fixedArrow)"><path d="M128 390 L128 329"/><path d="M672 390 L672 329"/><path d="M128 250 L128 187"/><path d="M672 250 L672 187"/><path d="M175 119 Q245 69 313 67"/><path d="M625 119 Q555 69 487 67"/><path d="M710 392 Q774 263 710 191" stroke="#2c768b" stroke-dasharray="9 5"/><path d="M719 250 Q794 49 486 37" stroke="#2c768b" stroke-dasharray="9 5"/></g></svg>
+<div id="webSlots" class="web-slots"></div></div><div class="web-scene-bank scene-bank"><div class="scene-bank-title">🧩 คลังบัตรภาพ 3D <span>หยิบจากตรงนี้ ↑</span></div><div class="web-bank vr-bank" id="webBank" aria-label="คลังภาพสิ่งมีชีวิต"></div></div></div>
+<div class="action"><button type="button" id="checkWeb">🔎 ตรวจสายใยอาหาร</button><button type="button" id="clearWeb" class="secondary">↺ จัดใหม่</button><button type="button" id="hintWeb" class="secondary">💡 ขอคำใบ้</button></div>
+<div class="subtle">💡 คำใบ้คงเหลือ: <b id="hint5Left">2</b> ครั้ง</div><div id="webFeedback" class="feedback" role="status" aria-live="polite"></div>
+<p class="vr-note">ลูกศรไม่เปลี่ยนตำแหน่ง เส้นสีน้ำเงินแบบประเป็นความสัมพันธ์เพิ่ม เช่น ปลาบางชนิดกินสาหร่าย และนกกระสากินหอยน้ำได้ด้วย</p></div>
+</section>
+<section class="stage" id="stage5"><div class="finish"><div class="medal">🏆</div><h2>ผ่านทั้ง 5 ภารกิจแล้ว!</h2><p>คุณได้ทดลองด้วยตัวเองว่า <b>พลังงานที่ถ่ายทอดได้ลดลง</b> ตามลำดับขั้นการกิน ขณะที่ <b>สารพิษคงทนบางชนิดอาจมีความเข้มข้นเพิ่มขึ้น</b></p><p class="big">คะแนนภารกิจ <span id="missionScore"></span> / 125</p></div><h2>🧠 แบบประเมินท้ายกิจกรรม 5 ข้อ</h2><div id="quiz"></div><div class="action"><button id="checkQuiz">ตรวจคำตอบพร้อมเฉลย</button><button id="resetQuiz" class="secondary">↺ ล้างคำตอบ</button><button id="restart" class="warning">เล่นทุกด่านอีกครั้ง</button></div><div id="quizResult" class="feedback" role="status"></div></section>
+</div><footer>สื่อการเรียนรู้วิทยาศาสตร์ ม.3 • ทำงานออฟไลน์โดยไม่ต้องติดตั้งแอป • รองรับเมาส์ สัมผัส และแป้นพิมพ์ • อัตราการถ่ายทอด 10% และตัวคูณสารพิษในเกมเป็นตัวอย่างเชิงแนวคิด ไม่ใช่ค่าตายตัวของธรรมชาติ</footer></main><script>
+const $=id=>document.getElementById(id);let level=0,score=0,hearts=3,done=[false,false,false,false,false];const showFeedback=(id,ok,message)=>{const el=$(id);el.className='feedback show'+(ok?'':' bad');el.innerHTML=(ok?'✅ ':'🔎 ')+message};function hud(){ $('score').textContent=score;$('hearts').textContent='♥'.repeat(hearts)+'♡'.repeat(3-hearts);$('mission').textContent=level<5?(level+1)+'/5':'ครบแล้ว';$('completed').textContent=done.filter(Boolean).length;document.querySelectorAll('.step').forEach((b,i)=>{b.disabled=i>done.filter(Boolean).length;b.classList.toggle('active',level===i);b.classList.toggle('done',done[i])})}function go(i){level=i;document.querySelectorAll('.stage').forEach((x,j)=>x.classList.toggle('active',j===i));hud();document.querySelector('.shell').scrollIntoView({behavior:'smooth',block:'start'})}document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(+b.dataset.go)));function complete(i){if(!done[i]){done[i]=true;score+=25}hud();setTimeout(()=>go(i===4?5:i+1),1050)}function incorrect(id,msg){if(difficulty!=='easy')hearts=Math.max(0,hearts-1);showFeedback(id,false,msg+(difficulty==='easy'?' • โหมดฝึกหัดลองใหม่ได้ไม่เสียหัวใจ':hearts===0?' ❤️‍🩹 หัวใจหมดแล้ว แต่ยังสามารถลองแก้ไขและเรียนรู้ต่อได้':' • เสีย 1 หัวใจ'));hud()}
+let difficulty='normal',hints2=2,hints5=2;
+function maxHints(){return difficulty==='easy'?99:difficulty==='hard'?1:2}
+function updateHints(){if($('hint2Left'))$('hint2Left').textContent=hints2===99?'∞':hints2;if($('hint5Left'))$('hint5Left').textContent=hints5===99?'∞':hints5}
+function setDifficulty(mode){difficulty=mode;hints2=maxHints();hints5=maxHints();document.querySelectorAll('[data-difficulty]').forEach(b=>{const on=b.dataset.difficulty===mode;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on?'true':'false')});const d={easy:'มีคำแนะนำบนการ์ด ขอคำใบ้ได้ไม่จำกัด และตอบผิดไม่เสียหัวใจ',normal:'ซ่อนคำเฉลยบนการ์ด ขอคำใบ้ได้ 2 ครั้งต่อด่าน',hard:'ซ่อนคำเฉลยบนการ์ด ขอคำใบ้ได้เพียง 1 ครั้งต่อด่าน และตอบผิดเสียหัวใจ'};$('difficultyInfo').textContent=d[mode];updateHints();if(typeof renderChain==='function')renderChain();if(typeof webPaint==='function')webPaint()}
+document.querySelectorAll('[data-difficulty]').forEach(b=>b.addEventListener('click',()=>setDifficulty(b.dataset.difficulty)));
+const eNames=['พืช','ตั๊กแตน','กบ','งู'],eEmoji=['🌿','🦗','🐸','🐍'];function renderEnergy(){const start=+$('eStart').value,r=+$('eRate').value/100;$('eStartLabel').textContent=start.toLocaleString('th-TH')+' kJ';$('eRateLabel').textContent=(r*100).toFixed(0)+'%';$('energyChain').innerHTML=eNames.map((name,i)=>`<div class="node"><div class="emoji">${eEmoji[i]}</div><b>${name}</b><small>${(start*Math.pow(r,i)).toLocaleString('th-TH',{maximumFractionDigits:2})} kJ</small><div class="meter"><div style="width:${Math.max(1,100*Math.pow(r,i))}%"></div></div></div>`).join('')};['eStart','eRate'].forEach(i=>$(i).addEventListener('input',renderEnergy));$('check1').onclick=()=>{const n=+$('eStart').value*Math.pow(+$('eRate').value/100,3);if(+$('eRate').value===10&&n>=15&&n<=25){showFeedback('fb1',true,`สำเร็จ! งูมีพลังงาน ${n.toFixed(1)} kJ พลังงานลดลงทุกระดับ แม้คุณเพิ่มพลังงานเริ่มต้น`);complete(0)}else incorrect('fb1',`ตอนนี้งูได้รับ ${n.toFixed(2)} kJ ลองตั้งอัตราส่งต่อ 10% แล้วปรับพลังงานพืชจนงูได้รับ 15–25 kJ`)};$('reset1').onclick=()=>{$('eStart').value=10000;$('eRate').value=10;renderEnergy()};renderEnergy();
+const organismArt={"grass":"./assets/grass.webp","algae":"./assets/algae.webp","grasshopper":"./assets/grasshopper.webp","frog":"./assets/frog.webp","snake":"./assets/snake.webp","snail":"./assets/snail.webp","fish":"./assets/fish.webp","heron":"./assets/heron.webp"};
+const creatures=[{id:'frog',emoji:'🐸',name:'กบ',hint:'ผู้บริโภคอันดับ 2',img:organismArt.frog},{id:'snake',emoji:'🐍',name:'งู',hint:'ผู้บริโภคอันดับสูงสุด',img:organismArt.snake},{id:'grass',emoji:'🌿',name:'พืช',hint:'ผู้ผลิต',img:organismArt.grass},{id:'grasshopper',emoji:'🦗',name:'ตั๊กแตน',hint:'ผู้บริโภคอันดับ 1',img:organismArt.grasshopper}],order=['grass','grasshopper','frog','snake'],chainPlaces=[{x:12,y:34,label:'ผู้ผลิต'},{x:37,y:34,label:'ผู้บริโภค 1'},{x:62,y:34,label:'ผู้บริโภค 2'},{x:87,y:34,label:'ผู้บริโภคสูงสุด'}];let slots=[null,null,null,null],selected=null;function label(id){return creatures.find(c=>c.id===id)}function renderChain(){const used=slots.filter(Boolean);$('bank').innerHTML=creatures.filter(c=>!used.includes(c.id)).map(c=>`<button class="token ${selected===c.id?'selected':''}" draggable="true" data-token="${c.id}"><img src="${c.img}" alt="${c.name}" class="card-art"><b>${c.name}</b><small>${difficulty==='easy'?c.hint:'ลากลงฉาก'}</small></button>`).join('');$('slots').innerHTML=slots.map((id,i)=>{const pos=chainPlaces[i],info=id?label(id):null;return `<button type="button" class="slot vr-slot ${id?'filled':''}" style="left:${pos.x}%;top:${pos.y}%" data-slot="${i}" tabindex="0" aria-label="ตำแหน่ง ${i+1}${id?', '+info.name:''}">${id?`<img src="${info.img}" alt="${info.name}" class="slot-art"><b>${info.name}</b><small>${difficulty==='easy'?info.hint:'สิ่งมีชีวิต'}</small>`:`<small>ตำแหน่ง ${i+1}</small><b>＋</b><div class="chain-label">${difficulty==='easy'?pos.label:'วางสิ่งมีชีวิต'}</div>`}</button>`}).join('');document.querySelectorAll('[data-token]').forEach(b=>{b.onclick=()=>{selected=b.dataset.token;renderChain()};b.ondragstart=e=>{selected=b.dataset.token;e.dataTransfer.setData('text/plain',selected)}});document.querySelectorAll('[data-slot]').forEach(el=>{const handler=()=>{const i=+el.dataset.slot;if(slots[i]){if(selected&&selected!==slots[i]){const old=slots[i];slots[i]=selected;selected=old}else{slots[i]=null}}else if(selected){slots[i]=selected;selected=null}renderChain()};el.onclick=handler;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();handler()}};el.ondragover=e=>e.preventDefault();el.ondrop=e=>{e.preventDefault();selected=e.dataTransfer.getData('text/plain');handler()}});attachPointerDnD('#bank [data-token]','[data-slot]',id=>selected=id,(target,id)=>{selected=id;const i=+target.dataset.slot;if(slots[i]){if(id!==slots[i]){const old=slots[i];slots[i]=id;selected=old}else{selected=null}}else{slots[i]=id;selected=null}renderChain()})}$('hint2').onclick=()=>{if(hints2<=0){showFeedback('fb2',false,'คำใบ้หมดแล้ว ลองดูว่าตัวใดสร้างอาหารเองได้ และตัวใดกินตัวก่อนหน้า');return}if(hints2!==99)hints2--;updateHints();showFeedback('fb2',true,'คำใบ้: เริ่มจากสิ่งมีชีวิตที่สร้างอาหารเองได้ จากนั้นตามด้วยสัตว์กินพืช สัตว์กินสัตว์ และผู้ล่าระดับบน')};$('check2').onclick=()=>{if(slots.some(x=>!x)){incorrect('fb2','ยังวางไม่ครบทั้ง 4 ตัว ลองใช้นิ้วหยิบการ์ดไปวางให้ครบทุกช่อง');return}if(slots.every((x,i)=>x===order[i])){showFeedback('fb2',true,'สร้างห่วงโซ่อาหารได้ถูกต้อง! ลูกศรแสดงทิศการส่งต่ออาหารและพลังงานจากสิ่งที่ถูกกินไปยังผู้กิน');complete(1)}else incorrect('fb2','ลำดับยังไม่ถูก ลองเริ่มที่ผู้ผลิตก่อน แล้วตามด้วยผู้บริโภคอันดับ 1 → 2 → สูงสุด')};$('reset2').onclick=()=>{slots=[null,null,null,null];selected=null;renderChain()};renderChain();
+function renderComparison(s,m){const start=+$('eStart').value,r=+$('eRate').value/100;const en=eNames.map((n,i)=>({n,v:start*Math.pow(r,i)})),to=eNames.map((n,i)=>({n,v:s*Math.pow(m,i)}));const bar=(items,type)=>{const max=Math.max(1,...items.map(a=>a.v));return items.map(a=>`<div class="compare-row"><span>${a.n}</span><div class="compare-track"><i class="${type}" style="width:${a.v===0?0:Math.max(3,a.v/max*100)}%"></i></div><em>${Number(a.v.toFixed(2)).toLocaleString('th-TH')}</em></div>`).join('')};$('compareEnergy').innerHTML=bar(en,'energy-bar');$('compareToxin').innerHTML=bar(to,'toxin-bar')}
+function renderToxin(){let s=+$('pStart').value,m=+$('pMult').value;$('pStartLabel').textContent=s.toFixed(1)+' หน่วย';$('pMultLabel').textContent=m+' เท่า';$('predatorToxin').textContent=(s*Math.pow(m,3)).toFixed(1)+' หน่วย';$('toxinChain').innerHTML=eNames.map((n,i)=>{const val=s*Math.pow(m,i);return `<div class="panel"><div class="emoji">${eEmoji[i]}</div><b>${n}</b><small>${val.toFixed(1)} หน่วย</small><div class="meter toxic"><div style="width:${Math.min(100,val/125*100)}%"></div></div></div>`}).join('');renderComparison(s,m)};['pStart','pMult'].forEach(id=>$(id).addEventListener('input',renderToxin));$('check3').onclick=()=>{const s=+$('pStart').value,m=+$('pMult').value,n=s*Math.pow(m,3);if(s>0&&m===2&&n<=8){showFeedback('fb3',true,`ทำได้! งูมีสารพิษ ${n.toFixed(1)} หน่วย ความเข้มข้นยังเพิ่มตามลำดับ แต่ควบคุมจุดเริ่มต้นทำให้ระดับสุดท้ายต่ำลง`);complete(2)}else incorrect('fb3',`ขณะนี้งูมีสารพิษ ${n.toFixed(1)} หน่วย ตั้งตัวคูณเป็น 2 แล้วลองลดค่าที่พืช โดยไม่ให้เป็นศูนย์`)};$('reset3').onclick=()=>{$('pStart').value=1;$('pMult').value=3;renderToxin()};renderToxin();
+let pollution=80,health=50,budget=100,round=0;const measures={source:{p:-35,h:10,b:-50,name:'ควบคุมการปล่อยสารพิษ'},clean:{p:-25,h:20,b:-45,name:'บำบัดน้ำ'},stock:{p:0,h:-10,b:-20,name:'ปล่อยผู้ล่าเพิ่ม'}};function renderCrisis(){$('crisisP').textContent=pollution;$('crisisH').textContent=health;$('crisisB').textContent=budget;$('roundLabel').innerHTML=`<b>รอบที่ ${Math.min(round+1,2)} จาก 2</b> • ${round===2?'ครบ 2 รอบแล้ว กดประเมินสถานการณ์':'เลือกมาตรการที่เหมาะสม'}`;$('roundProgress').style.width=round*50+'%';$('check4').disabled=round<2;document.querySelectorAll('[data-action]').forEach(b=>b.disabled=round>=2)}document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>{if(round>=2)return;let a=measures[b.dataset.action];budget+=a.b;pollution=Math.max(0,pollution+a.p);health=Math.max(0,Math.min(100,health+a.h));round++;renderCrisis();showFeedback('fb4',true,`รอบ ${round}: เลือก “${a.name}” • ปัจจุบันมลพิษ ${pollution}, สุขภาพระบบนิเวศ ${health}, งบเหลือ ${budget}`)});$('check4').onclick=()=>{if(pollution<=30&&health>=70&&budget>=0){showFeedback('fb4',true,'ภารกิจสำเร็จ! คุณใช้มาตรการควบคุมต้นทางและฟื้นฟูน้ำ ทำให้ระบบนิเวศดีขึ้นภายในงบประมาณ');complete(3)}else incorrect('fb4','ยังไม่ผ่านเป้าหมาย ลองเริ่มสถานการณ์ใหม่ เลือกการลดสารพิษที่ต้นเหตุควบคู่กับการบำบัดฟื้นฟู')};$('reset4').onclick=()=>{pollution=80;health=50;budget=100;round=0;$('fb4').className='feedback';renderCrisis()};renderCrisis();
+const quiz=[{q:'เมื่อพลังงานถ่ายทอดจากพืชไปยังตั๊กแตน กบ และงู ปริมาณพลังงานที่มีให้ในแต่ละระดับมีแนวโน้มอย่างไร?',options:['เพิ่มขึ้นทุกระดับ','ลดลงตามลำดับการกิน','เท่าเดิมทุกระดับ'],a:1,ex:'พลังงานลดลงเพราะสิ่งมีชีวิตใช้ในการดำรงชีวิต พลังงานเพียงบางส่วนส่งต่อไปยังระดับถัดไป'},{q:'เหตุใดงูจึงอาจมีความเข้มข้นของสารพิษบางชนิดสูงกว่าพืช?',options:['งูผลิตสารพิษทุกชนิดได้เอง','สารพิษที่คงทนสะสมได้ และผู้ล่ารับสารพิษจากเหยื่อหลายตัว','สารพิษถูกเปลี่ยนเป็นพลังงานทันที'],a:1,ex:'สารพิษบางชนิดคงทน สลายและขับออกยาก จึงอาจเกิดการเพิ่มความเข้มข้นตามลำดับการกิน'},{q:'ข้อใดสรุปความแตกต่างได้ถูกต้องที่สุด?',options:['พลังงานและสารพิษเพิ่มขึ้นเสมอ','พลังงานลดลง ส่วนสารพิษคงทนบางชนิดอาจเข้มข้นขึ้น','สารพิษทุกชนิดเพิ่มเป็น 3 เท่าเสมอ'],a:1,ex:'10% และตัวคูณสารพิษเป็นเพียงตัวอย่างในแบบจำลอง ไม่ใช่ค่าตายตัวของธรรมชาติ'},{q:'จากสายใยอาหารแหล่งน้ำ หากแคดเมียมจากโรงงานปนเปื้อนลงในน้ำ สิ่งมีชีวิตใดมีแนวโน้มมีความเข้มข้นของแคดเมียมสะสมในร่างกายมากที่สุด เพราะเหตุใด?',options:['คน เพราะเป็นผู้บริโภคลำดับสูงท้ายสายใยอาหาร','สาหร่ายและตะไคร่น้ำ เพราะเป็นผู้ผลิต','ปลาดุก เพราะกินทั้งผู้ผลิตและสิ่งมีชีวิตอื่น','ปลาช่อน เพราะเป็นผู้ล่าที่กินเหยื่อหลายชนิด'],a:0,ex:'ตามแบบจำลองในโจทย์ คนอยู่ในลำดับการกินสูงสุดและอาจได้รับสารพิษตกค้างจากการกินสิ่งมีชีวิตระดับต่ำกว่า จึงมีแนวโน้มเข้มข้นสูงที่สุดเมื่อเกิดการขยายความเข้มข้นทางชีวภาพ',diagram:'water'},{q:'จากสายใยอาหารทุ่งหญ้า ให้เลือกหมายเลขสิ่งมีชีวิต 3 ลำดับที่มีพลังงานในระดับการกินจากน้อยที่สุดไปมากขึ้นตามลำดับ โดยลำดับที่ 2 ต้องเป็นผู้บริโภคอันดับที่ 3',options:['5 → 6 → 4 (นกอินทรี → งู → หนู)','1 → 2 → 4 (หญ้า → ตั๊กแตน → หนู)','6 → 5 → 4 (งู → นกอินทรี → หนู)','4 → 6 → 5 (หนู → งู → นกอินทรี)'],a:0,ex:'จากลำดับ หญ้า (1) → ตั๊กแตน/จิ้งหรีด (2/3) → หนู (4) → งู (6) → นกอินทรี (5): พลังงานที่มีให้ในระดับการกินจะลดลงเมื่อสูงขึ้น จึงเรียงจากน้อยไปมากได้ 5 → 6 → 4',diagram:'grass'}];$('quiz').innerHTML=quiz.map((q,i)=>`<div class="quizq"><strong>${i+1}. ${q.q}</strong>${q.diagram==='water'?`<div class="quiz-diagram"><b>สายใยอาหารแหล่งน้ำ (ลูกศรจากอาหาร → ผู้กิน)</b><div>🌿 สาหร่าย / 🌱 ตะไคร่น้ำ → 🐟 ปลานิล / 🐚 หอยขม / 🐟 ปลาดุก → 🐟 ปลาช่อน → 👤 คน</div><small>ทั้งปลานิลและปลาดุกเป็นอาหารของคนได้ และปลาช่อนเป็นผู้ล่าปลาชนิดอื่น</small></div>`:q.diagram==='grass'?`<div class="quiz-diagram"><b>สายใยอาหารทุ่งหญ้า</b><div>1 🌱 หญ้า → 2 🦗 ตั๊กแตน / 3 🦗 จิ้งหรีด → 4 🐭 หนู → 6 🐍 งู → 5 🦅 นกอินทรี</div><small>ลูกศรแสดงการถ่ายทอดพลังงานจากสิ่งที่ถูกกินไปยังผู้กิน</small></div>`:''}${q.options.map((o,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}"><span>${o}</span></label>`).join('')}<div id="answer${i}" class="feedback"></div></div>`).join('');$('checkQuiz').onclick=()=>{let n=0;quiz.forEach((q,i)=>{const radio=document.querySelector(`input[name=q${i}]:checked`),ok=radio&&+radio.value===q.a;if(ok)n++;showFeedback('answer'+i,ok,`เฉลย: ${q.options[q.a]} — ${q.ex}`)});showFeedback('quizResult',n===quiz.length,`คะแนนแบบประเมิน ${n}/${quiz.length} ข้อ • คะแนนภารกิจ ${score}/125`)};$('resetQuiz').onclick=()=>{document.querySelectorAll('#quiz input').forEach(x=>x.checked=false);document.querySelectorAll('#quiz .feedback').forEach(x=>x.className='feedback');$('quizResult').className='feedback'};$('restart').onclick=()=>{hints2=maxHints();hints5=maxHints();updateHints();score=0;hearts=3;done=[false,false,false,false,false];$('reset1').click();$('reset2').click();$('reset3').click();$('reset4').click();$('resetQuiz').click();$('clearWeb').click();['fb1','fb2','fb3'].forEach(id=>$(id).className='feedback');go(0)};
+// ภารกิจ 5: ลูกศรเป็น SVG คงตำแหน่ง นักเรียนย้ายได้เฉพาะตัวสิ่งมีชีวิต
+const webAnimals=[{id:'grass',e:'🌾',n:'หญ้า',hint:'ผู้ผลิตบนบก',img:organismArt.grass},{id:'algae',e:'🌿',n:'สาหร่าย',hint:'ผู้ผลิตในน้ำ',img:organismArt.algae},{id:'hopper',e:'🦗',n:'ตั๊กแตน',hint:'กินหญ้า',img:organismArt.grasshopper},{id:'snail',e:'🐌',n:'หอยน้ำ',hint:'กินสาหร่าย',img:organismArt.snail},{id:'frog',e:'🐸',n:'กบ',hint:'กินตั๊กแตน',img:organismArt.frog},{id:'fish',e:'🐟',n:'ปลา',hint:'กินหอยน้ำ',img:organismArt.fish},{id:'heron',e:'🪶',n:'นกกระสา',hint:'ผู้ล่าระดับสูง',img:organismArt.heron}];
+const webPlaces=[{x:16,y:84,id:'grass'},{x:84,y:84,id:'algae'},{x:16,y:56,id:'hopper'},{x:84,y:56,id:'snail'},{x:16,y:28,id:'frog'},{x:84,y:28,id:'fish'},{x:50,y:13,id:'heron'}];
+let webAssigned=Array(7).fill(null),webSelected=null;
+const webName=id=>webAnimals.find(a=>a.id===id);
+function webPaint(){const used=webAssigned.filter(Boolean);$('webBank').innerHTML=webAnimals.filter(a=>!used.includes(a.id)).map(a=>`<button type="button" class="web-token ${webSelected===a.id?'selected':''}" data-web-token="${a.id}" draggable="true"><img src="${a.img}" alt="${a.n}" class="card-art"><b>${a.n}</b><small>${difficulty==='easy'?a.hint:'ลากลงสายใย'}</small></button>`).join('');
+$('webSlots').innerHTML=webPlaces.map((pos,i)=>{const a=webName(webAssigned[i]);return `<button type="button" class="web-node ${a?'filled':''}" style="left:${pos.x}%;top:${pos.y}%" data-web-slot="${i}" aria-label="ช่อง ${i+1}${a?' '+a.n:''}">${a?`<img src="${a.img}" alt="${a.n}" class="web-slot-art"><b>${a.n}</b><small>${difficulty==='easy'?a.hint:'สิ่งมีชีวิต'}</small>`:`<span>ช่อง ${i+1}</span><span style="font-size:20px">＋</span>`}</button>`}).join('');
+document.querySelectorAll('[data-web-token]').forEach(b=>{b.onclick=()=>{webSelected=b.dataset.webToken;webPaint()};b.ondragstart=e=>{webSelected=b.dataset.webToken;e.dataTransfer.setData('text/plain',webSelected)}});
+document.querySelectorAll('[data-web-slot]').forEach(b=>{const move=()=>{let i=+b.dataset.webSlot;if(webAssigned[i]){if(webSelected&&webSelected!==webAssigned[i]){const old=webAssigned[i];webAssigned[i]=webSelected;webSelected=old}else{webAssigned[i]=null}}else if(webSelected){webAssigned[i]=webSelected;webSelected=null}webPaint()};b.onclick=move;b.ondragover=e=>e.preventDefault();b.ondrop=e=>{e.preventDefault();webSelected=e.dataTransfer.getData('text/plain');move()}});attachPointerDnD('#webBank [data-web-token]','[data-web-slot]',id=>webSelected=id,(target,id)=>{webSelected=id;const i=+target.dataset.webSlot;if(webAssigned[i]){if(id!==webAssigned[i]){const old=webAssigned[i];webAssigned[i]=id;webSelected=old}else{webSelected=null}}else{webAssigned[i]=id;webSelected=null}webPaint()})}
+$('clearWeb').onclick=()=>{webAssigned=Array(7).fill(null);webSelected=null;webPaint();$('webFeedback').className='feedback'};
+$('hintWeb').onclick=()=>{if(hints5<=0){showFeedback('webFeedback',false,'คำใบ้ของด่านนี้หมดแล้ว ลองสังเกตลูกศรและประเภทของอาหาร');return}if(hints5!==99)hints5--;updateHints();showFeedback('webFeedback',true,'ลองมองลูกศรจากอาหารไปยังผู้กิน: วางผู้ผลิตไว้จุดเริ่มต้น แล้วคิดว่าผู้ล่าที่กินอาหารได้หลายชนิดควรอยู่ตรงไหน')};
+$('checkWeb').onclick=()=>{if(webAssigned.some(v=>!v)){incorrect('webFeedback','ยังจัดไม่ครบ 7 ช่อง เลือกรูปและแตะช่องว่างให้ครบก่อน');return}const bad=webPlaces.map((p,i)=>webAssigned[i]===p.id?null:i+1).filter(Boolean);if(!bad.length){showFeedback('webFeedback',true,'ยอดเยี่ยม! สายใยอาหารทั้ง 2 เส้นทางถูกต้อง: หญ้า → ตั๊กแตน → กบ → นกกระสา และ สาหร่าย → หอยน้ำ → ปลา → นกกระสา • ลูกศรบอกทิศทางการถ่ายทอดพลังงานจากอาหารสู่ผู้กิน');complete(4)}else incorrect('webFeedback',`ยังมี ${bad.length} ช่องที่ควรทบทวน ลองพิจารณาว่าใครกินใครจากทิศลูกศร (ช่อง ${bad.join(', ')})`)};
+webPaint();
+
+function attachPointerDnD(tokenSelector,slotSelector,onPick,onDrop){
+  const tokens=document.querySelectorAll(tokenSelector);
+  tokens.forEach(el=>{
+    if(el.dataset.pointerBound==='1') return;
+    el.dataset.pointerBound='1';
+    let ghost=null,startX=0,startY=0,moved=false,currentHover=null;
+    const cleanup=(upEv)=>{
+      document.removeEventListener('pointermove',move);
+      document.removeEventListener('pointerup',up);
+      document.removeEventListener('pointercancel',cancel);
+      if(currentHover) currentHover.classList.remove('drag-hover');
+      if(ghost) ghost.remove();
+      if(upEv && moved){
+        const dropTarget=document.elementFromPoint(upEv.clientX,upEv.clientY)?.closest(slotSelector);
+        if(dropTarget){ onDrop(dropTarget,el.dataset.webToken||el.dataset.token); }
+      }
+      ghost=null; currentHover=null;
+    };
+    const move=(ev)=>{
+      if(ev.cancelable) ev.preventDefault();
+      const dx=ev.clientX-startX,dy=ev.clientY-startY;
+      if(!moved && Math.hypot(dx,dy)>8){ moved=true; }
+      if(ghost){ ghost.style.left=ev.clientX+'px'; ghost.style.top=ev.clientY+'px'; }
+      const hover=document.elementFromPoint(ev.clientX,ev.clientY)?.closest(slotSelector);
+      if(hover!==currentHover){ if(currentHover) currentHover.classList.remove('drag-hover'); currentHover=hover; if(currentHover) currentHover.classList.add('drag-hover'); }
+    };
+    const up=(ev)=> cleanup(ev);
+    const cancel=()=> cleanup();
+    el.addEventListener('pointerdown',ev=>{
+      if(ev.button!==undefined && ev.button!==0) return;
+      startX=ev.clientX; startY=ev.clientY; moved=false; onPick(el.dataset.webToken||el.dataset.token);
+      ghost=el.cloneNode(true); ghost.classList.add('drag-ghost'); ghost.style.width=Math.max(el.getBoundingClientRect().width,90)+'px'; ghost.style.left=ev.clientX+'px'; ghost.style.top=ev.clientY+'px'; document.body.appendChild(ghost);
+      document.addEventListener('pointermove',move,{passive:false});
+      document.addEventListener('pointerup',up,{passive:true});
+      document.addEventListener('pointercancel',cancel,{passive:true});
+    },{passive:true});
+  });
+}
+setDifficulty('normal');
+const previousGo=go;go=function(i){if(i===5)$('missionScore').textContent=score;previousGo(i)};hud();
+</script><script>
+// Camera AR: environment-facing camera behind fixed 2D overlays. No marker/3D world tracking.
+(function(){
+ const boards=[document.getElementById('chainBoard'),document.getElementById('webBoard')];
+ let cameraStream=null, facing='environment', arActive=false, pending=false;
+ const statusText=t=>document.querySelectorAll('.ar-status').forEach(e=>e.textContent=t);
+ const syncButtons=()=>document.querySelectorAll('[data-ar-toggle]').forEach(e=>e.textContent=arActive?'⏹ ปิดกล้อง AR':'📷 เปิดกล้อง AR');
+ function stopCamera(){
+   if(cameraStream){cameraStream.getTracks().forEach(t=>t.stop());cameraStream=null}
+   boards.forEach(b=>{b.classList.remove('ar-camera-on'); const video=b.querySelector('video');video.pause();video.srcObject=null});
+   arActive=false;syncButtons();statusText('🌳 โหมดฉากระบบนิเวศจำลอง');
+ }
+ async function startCamera(){
+   if(pending)return;
+   pending=true;
+   try{
+     if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)throw new Error('เบราว์เซอร์นี้ไม่รองรับกล้อง AR หรือไม่ได้เปิดใน HTTPS');
+     if(cameraStream)cameraStream.getTracks().forEach(t=>t.stop());
+     cameraStream=null;
+     statusText('กำลังขออนุญาตใช้งานกล้อง…');
+     const stream=await navigator.mediaDevices.getUserMedia({audio:false,video:{facingMode:{ideal:facing},width:{ideal:1280},height:{ideal:720}}});
+     cameraStream=stream;
+     await Promise.all(boards.map(async b=>{const v=b.querySelector('video');v.srcObject=stream; b.classList.add('ar-camera-on');try{await v.play()}catch(e){}}));
+     arActive=true;syncButtons();statusText('✅ เปิดกล้องแล้ว • หยิบและลากสิ่งมีชีวิตบนภาพจริง');
+     const track=stream.getVideoTracks()[0];
+     if(track)track.addEventListener('ended',()=>{if(cameraStream===stream)stopCamera()},{once:true});
+   }catch(err){stopCamera();statusText('⚠️ ไม่สามารถเปิดกล้องได้ ใช้ฉากระบบนิเวศแทน • อนุญาตกล้องและเปิดผ่าน HTTPS เพื่อใช้ AR');}
+   finally{pending=false}
+ }
+ document.querySelectorAll('[data-ar-toggle]').forEach(button=>button.addEventListener('click',()=>arActive?stopCamera():startCamera()));
+ document.querySelectorAll('[data-ar-facing]').forEach(button=>button.addEventListener('click',()=>{facing=facing==='environment'?'user':'environment';if(arActive)startCamera();else statusText(facing==='user'?'เลือกกล้องหน้าแล้ว • กดเปิดกล้อง AR':'เลือกกล้องหลังแล้ว • กดเปิดกล้อง AR')}));
+ document.addEventListener('visibilitychange',()=>{if(document.hidden&&arActive)stopCamera()});
+ window.addEventListener('pagehide',stopCamera);
+})();
+</script><script>
+(function(){
+ 'use strict';
+ const AudioContextCtor=window.AudioContext||window.webkitAudioContext;
+ const soundButton=document.getElementById('soundToggle');
+ const musicButton=document.getElementById('musicToggle');
+ const vol=document.getElementById('soundVolume');
+ const pct=document.getElementById('soundPercent');
+ const stat=document.getElementById('soundStatus');
+ let ctx=null, master=null, enabled=false, music=false, loop=null,beat=0;
+ function engine(){if(!AudioContextCtor){stat.textContent='เบราว์เซอร์นี้ไม่รองรับการสร้างเสียง';return false}
+  if(!ctx){ctx=new AudioContextCtor();master=ctx.createGain();master.gain.value=Number(vol.value)/100*.42;master.connect(ctx.destination)}
+  if(ctx.state==='suspended')ctx.resume().catch(()=>{});return true;}
+ function tone(f,d=.13,type='sine',gain=.4,delay=0,endF){if(!enabled||!engine())return;
+   let o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+delay;
+   o.type=type;o.frequency.setValueAtTime(Math.max(40,f),t);
+   if(endF)o.frequency.exponentialRampToValueAtTime(Math.max(40,endF),t+d);
+   g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(Math.max(.001,gain),t+.012);
+   g.gain.exponentialRampToValueAtTime(.0001,t+d);
+   o.connect(g);g.connect(master);o.start(t);o.stop(t+d+.03);
+ }
+ function fx(name){if(!enabled)return;
+  switch(name){
+   case 'pick':tone(460,.075,'sine',.24,0,650);break;
+   case 'drop':tone(550,.09,'triangle',.32);tone(800,.13,'sine',.23,.055);break;
+   case 'tap':tone(350,.075,'sine',.11);break;
+   case 'success':[[523,0],[659,.10],[784,.20],[1047,.33]].forEach(([f,t])=>tone(f,.21,'triangle',.36,t));break;
+   case 'wrong':tone(310,.16,'sawtooth',.22,0,210);tone(210,.18,'triangle',.18,.13,145);break;
+   case 'next':tone(392,.10,'triangle',.25);tone(523,.12,'triangle',.28,.10);tone(659,.14,'triangle',.3,.22);break;
+   case 'win':[[523,0],[659,.12],[784,.24],[1047,.40],[1318,.62]].forEach(([f,t])=>tone(f,.28,'triangle',.30,t));break;
+   case 'quiz':tone(660,.12,'sine',.2);tone(880,.18,'sine',.25,.13);break;
+  }
+ }
+ const melody=[392,523,587,659,523,440,392,330,392,523,659,784,659,587,523,440];
+ function musicPulse(){if(!enabled||!music||document.hidden)return;let f=melody[beat%melody.length];tone(f,.19,'sine',.095);if(beat%4===0)tone(196,.22,'triangle',.09);beat++;}
+ function sync(){soundButton.textContent=enabled?'🔈 ปิดเสียง':'🔊 เปิดเสียง';soundButton.setAttribute('aria-pressed',String(enabled));musicButton.textContent=music?'🎵 ปิดดนตรี':'🎵 เปิดดนตรี';musicButton.setAttribute('aria-pressed',String(music));stat.textContent=enabled?(music?'เปิดเสียงและดนตรีแล้ว':'เปิดเสียงเอฟเฟกต์แล้ว'):'ปิดเสียงอยู่';}
+ soundButton.addEventListener('click',()=>{enabled=!enabled;if(!enabled){music=false;clearInterval(loop);loop=null;}else{engine();fx('next')}sync()});
+ musicButton.addEventListener('click',()=>{if(!enabled){enabled=true;engine()}music=!music;clearInterval(loop);loop=null;if(music){beat=0;musicPulse();loop=setInterval(musicPulse,340)}sync()});
+ vol.addEventListener('input',()=>{pct.textContent=vol.value+'%';if(master)master.gain.value=Number(vol.value)/100*.42});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden&&ctx&&ctx.state==='running')ctx.suspend().catch(()=>{});else if(!document.hidden&&enabled&&ctx)ctx.resume().catch(()=>{})});
+ // The existing handlers remain responsible for all game state; audio adds only feedback.
+ document.addEventListener('pointerdown',ev=>{if(ev.target.closest('[data-token],[data-web-token]'))fx('pick')},{capture:true,passive:true});
+ document.addEventListener('pointerup',ev=>{if(ev.target.closest('[data-slot],[data-web-slot]'))fx('drop')},{capture:true,passive:true});
+ document.addEventListener('click',ev=>{
+  if(ev.target.closest('[data-token],[data-web-token]'))fx('pick');
+  else if(ev.target.closest('[data-slot],[data-web-slot]'))fx('drop');
+  else if(ev.target.closest('button')&&!ev.target.closest('.sound-controls'))fx('tap');
+ },{capture:true});
+ const originalComplete=window.complete;
+ if(typeof originalComplete==='function')window.complete=function(i){fx(i===4?'win':'success');return originalComplete(i)};
+ const originalIncorrect=window.incorrect;
+ if(typeof originalIncorrect==='function')window.incorrect=function(id,msg){fx('wrong');return originalIncorrect(id,msg)};
+ const originalGo=window.go;
+ if(typeof originalGo==='function')window.go=function(i){if(i===5)fx('win');else if(i>0)fx('next');return originalGo(i)};
+ const quizButton=document.getElementById('checkQuiz');if(quizButton)quizButton.addEventListener('click',()=>{fx('quiz')});
+ sync();
+})();
+</script>
+<script>
+/* MediaPipe Hand Landmarker integration with clear camera-first diagnosis. */
+(()=>{
+'use strict';
+const selects=[...document.querySelectorAll('.mp-mode')];
+const indicators=[...document.querySelectorAll('.mp-indicator')];
+const ratios=[...document.querySelectorAll('.mp-ratio')];
+const boards=[document.getElementById('chainBoard'),document.getElementById('webBoard')];
+const dock=document.createElement('div');dock.className='mp-dock';dock.innerHTML='<video autoplay muted playsinline aria-label="กล้องติดตามมือ"></video><canvas aria-hidden="true"></canvas><span>🖐️ ให้นิ้วอยู่ในกล้อง • จีบ = หยิบ • คลาย = วาง</span>';document.body.appendChild(dock);
+const cameraVideo=dock.querySelector('video'),debug=dock.querySelector('canvas'),ctx=debug.getContext('2d');
+const pointer=document.createElement('div');pointer.className='mp-cursor';document.body.appendChild(pointer);
+const held=document.createElement('div');held.className='mp-held';document.body.appendChild(held);
+boards.forEach(b=>{if(!b.querySelector('.mp-ar-video')){const v=document.createElement('video');v.className='mp-ar-video';v.autoplay=true;v.muted=true;v.playsInline=true;b.prepend(v)}});
+let mode='touch',stage=1,stream=null,detector=null,frame=0,runId=0,lastVideoTime=-1,lastUpdate=0;
+let grabId=null,grab=false,position=null,hover=null,closedCount=0,openCount=0,missing=0;
+let cameraTest=false;
+const status=(message,error=false)=>document.querySelectorAll('.mp-status').forEach(e=>{e.textContent=message;e.classList.toggle('error',error)});
+const state=(name,cls='',ratio='—')=>{indicators.forEach(e=>{e.textContent=name;e.className='mp-indicator '+cls});ratios.forEach(e=>e.textContent='สถานะการจีบ: '+ratio)};
+const reason=(err)=>{const n=err?.name||'',m=err?.message||String(err);
+ if(n==='NotAllowedError'||n==='PermissionDeniedError')return 'ไม่ได้รับอนุญาตใช้กล้อง • กดไอคอนกล้องหรือแม่กุญแจในแถบที่อยู่ แล้วตั้งค่าเป็น Allow';
+ if(n==='NotFoundError'||n==='DevicesNotFoundError')return 'ไม่พบกล้อง • ตรวจสอบว่ากล้องต่ออยู่และไม่ได้ถูกปิด';
+ if(n==='NotReadableError'||n==='TrackStartError')return 'กล้องกำลังถูกใช้โดยแอปอื่น • ปิดโปรแกรมประชุมหรือแอปกล้องก่อน';
+ if(n==='OverconstrainedError')return 'กล้องไม่รองรับการตั้งค่าที่เลือก';
+ if(n==='SecurityError')return 'เบราว์เซอร์บล็อกกล้อง เนื่องจากสิทธิ์หรือความปลอดภัย';
+ if(m.includes('MediaPipe')||m.includes('fetch')||m.includes('Importing')||m.includes('module'))return 'กล้องอาจเปิดได้ แต่เบราว์เซอร์โหลด MediaPipe ไม่สำเร็จ • ตรวจสอบ HTTPS/localhost, อินเทอร์เน็ตและตัวบล็อก CDN แล้วกดเริ่มใหม่ • รายละเอียด: '+m.slice(0,220);
+ return m;
+};
+function resetGesture(){grabId=null;grab=false;position=null;closedCount=0;openCount=0;missing=0;held.classList.remove('active');pointer.classList.remove('active','pinched');if(hover){hover.classList.remove('mp-target');hover=null}state('⚪ ยังไม่พบมือ')}
+function stop(){cancelAnimationFrame(frame);frame=0;runId++;if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}cameraVideo.pause();cameraVideo.srcObject=null;boards.forEach(b=>{b.classList.remove('mp-ar-mode');const v=b.querySelector('.mp-ar-video');v.pause();v.srcObject=null});dock.classList.remove('active');ctx.clearRect(0,0,debug.width,debug.height);cameraTest=false;resetGesture()}
+function sync(){selects.forEach(e=>e.value=mode);document.querySelectorAll('.mp-stop').forEach(e=>e.disabled=mode==='touch'&&!stream);document.querySelectorAll('[data-ar-toggle],[data-ar-facing]').forEach(e=>{e.disabled=mode!=='touch'||cameraTest;e.title=e.disabled?'กล้องถูกใช้งานโดยระบบตรวจจับมือ':''})}
+async function requestCamera(){
+ if(!window.isSecureContext || !navigator.mediaDevices?.getUserMedia)throw new Error('เว็บไม่อยู่ในบริบทที่ปลอดภัย • ต้องเปิดผ่าน HTTPS หรือ http://localhost (ไม่แนะนำให้เปิดไฟล์จากแอปจัดการไฟล์)');
+ const options=[{audio:false,video:{facingMode:'user',width:{ideal:640},height:{ideal:480},frameRate:{ideal:24}}},{audio:false,video:true}];
+ let error;
+ for(const opt of options){try{return await navigator.mediaDevices.getUserMedia(opt)}catch(e){error=e;if(e.name==='NotAllowedError'||e.name==='SecurityError')break}}
+ throw error;
+}
+const MP_VERSION='0.10.22';
+const MP_CANDIDATES=[
+ {label:'ไฟล์ MediaPipe ในเครื่อง (ไม่ใช้ CDN)',module:'./mediapipe/vision_bundle.mjs',wasm:'./mediapipe/wasm',model:'./mediapipe/hand_landmarker.task'},
+ {label:'jsDelivr',module:'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22/vision_bundle.mjs',wasm:'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22/wasm'},
+ {label:'unpkg',module:'https://unpkg.com/@mediapipe/tasks-vision@0.10.22/vision_bundle.mjs',wasm:'https://unpkg.com/@mediapipe/tasks-vision@0.10.22/wasm'},
+ {label:'jsDelivr alternative',module:'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/vision_bundle.mjs',wasm:'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm'}
+];
+const MP_MODEL='https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task';
+let mpImportIssues=[];
+async function timeoutTask(promise,ms,what){
+ let timeout;
+ try{return await Promise.race([promise,new Promise((_,rej)=>{timeout=setTimeout(()=>rej(new Error(what+' ใช้เวลานานเกิน '+Math.round(ms/1000)+' วินาที')),ms)})])}
+ finally{clearTimeout(timeout)}
+}
+async function loadDetector(){
+ if(detector)return detector;
+ mpImportIssues=[];
+ for(let idx=0;idx<MP_CANDIDATES.length;idx++){
+  const source=MP_CANDIDATES[idx];
+  try{
+   status('🧠 โหลด MediaPipe ('+(idx+1)+'/'+MP_CANDIDATES.length+'): '+source.label+' …');
+   // Import the actual official package ESM bundle, not jsDelivr +esm/npm package.
+   const imported=await timeoutTask(import(/* webpackIgnore: true */ source.module),16000,'โหลด JavaScript');
+   const HandLandmarker=imported.HandLandmarker||imported.default?.HandLandmarker;
+   const FilesetResolver=imported.FilesetResolver||imported.default?.FilesetResolver;
+   if(!HandLandmarker||!FilesetResolver)throw new Error('ไฟล์โมดูลไม่มี HandLandmarker หรือ FilesetResolver');
+   status('🧠 โหลด WebAssembly และโมเดลตรวจจับมือจาก '+source.label+' …');
+   const vision=await timeoutTask(FilesetResolver.forVisionTasks(source.wasm),16000,'โหลด WebAssembly');
+   const options={baseOptions:{modelAssetPath:source.model||MP_MODEL,delegate:'GPU'},runningMode:'VIDEO',numHands:1,minHandDetectionConfidence:.45,minHandPresenceConfidence:.45,minTrackingConfidence:.45};
+   try{detector=await timeoutTask(HandLandmarker.createFromOptions(vision,options),30000,'โหลดโมเดลตรวจจับมือ')}
+   catch(gpuError){
+    options.baseOptions.delegate='CPU';
+    detector=await timeoutTask(HandLandmarker.createFromOptions(vision,options),30000,'โหลดโมเดลแบบ CPU');
+   }
+   return detector;
+  }catch(error){
+   const message=(error?.message||String(error)).slice(0,160);
+   mpImportIssues.push(source.label+': '+message);
+   console.warn('MediaPipe '+source.label+' failed:',error);
+  }
+ }
+ throw new Error('MediaPipe เริ่มไม่ได้: ตรวจสอบว่าได้รัน ติดตั้ง_MediaPipe.py แล้ว และเปิดเกมผ่าน เปิดเกม_Windows.bat หรือ เปิดเกม_Mac.command • รายละเอียด: '+mpImportIssues.join(' | '));
+}
+async function start(next,stageId,test=false){
+ stop();mode=next;stage=stageId;cameraTest=test;sync();
+ if(next==='touch'&&!test){status('👆 โหมดสัมผัส / เมาส์ พร้อมใช้');return}
+ const ticket=runId;
+ try{
+  status('📷 ขั้นที่ 1/2: กำลังขออนุญาตเปิดกล้อง… (ใช้ HTTPS หรือ localhost)');
+  const cam=await requestCamera();if(ticket!==runId){cam.getTracks().forEach(t=>t.stop());return}
+  stream=cam;cameraVideo.srcObject=cam;await cameraVideo.play();dock.classList.add('active');
+  debug.width=cameraVideo.videoWidth||640;debug.height=cameraVideo.videoHeight||480;
+  state('📷 กล้องทำงานแล้ว');
+  if(test){status('✅ กล้องเปิดได้แล้ว! หากเห็นภาพตนเอง แปลว่าสิทธิ์กล้องปกติ • เลือก Hand Tracking หรือ AR + Hand Tracking เพื่อทดสอบการจีบนิ้ว');sync();return}
+  if(mode==='arhand'){for(const b of boards){const v=b.querySelector('.mp-ar-video');v.srcObject=cam;b.classList.add('mp-ar-mode');v.play().catch(()=>{})}}
+  status('🧠 ขั้นที่ 2/2: กล้องเปิดแล้ว กำลังโหลดโมเดลตรวจจับมือ (ถ้าติดตั้ง MediaPipe ในเครื่องแล้ว ไม่ต้องเชื่อมต่อ CDN)…');
+  await loadDetector();if(ticket!==runId)return;
+  status('✅ MediaPipe พร้อม! ชูมือหน้ากล้องให้เห็นครบทุกนิ้ว แล้วใช้นิ้วชี้เล็งภาพ จีบนิ้วหยิบและคลายนิ้วบนช่องเพื่อวาง');
+  lastVideoTime=-1;lastUpdate=0;frame=requestAnimationFrame(loop);
+ }catch(e){console.warn('MediaPipe diagnostic:',e);const msg=reason(e);stop();mode='touch';sync();status('⚠️ '+msg,true)}
+}
+function activeRect(){const bank=document.getElementById(stage===1?'bank':'webBank');const board=boards[stage===1?0:1];const a=bank.getBoundingClientRect(),b=board.getBoundingClientRect();return {left:Math.min(a.left,b.left),right:Math.max(a.right,b.right),top:Math.min(a.top,b.top),bottom:Math.max(a.bottom,b.bottom)}}
+const selectors=()=>stage===1?{token:'[data-token]',slot:'[data-slot]'}:{token:'[data-web-token]',slot:'[data-web-slot]'};
+const at=(x,y,css)=>document.elementFromPoint(x,y)?.closest(css)||null;
+function pick(token){
+ token.click();grabId=stage===1?token.dataset.token:token.dataset.webToken;
+ const entry=stage===1?creatures.find(c=>c.id===grabId):webAnimals.find(c=>c.id===grabId);
+ if(entry){held.innerHTML=`<img src="${entry.img}" alt=""><span>${entry.name||entry.n}</span>`;held.classList.add('active');status('🤏 หยิบ '+(entry.name||entry.n)+' แล้ว • ขยับมือไปเหนือช่องเป้าหมาย แล้วคลายนิ้ว')}
+}
+function release(x,y){
+ const slot=at(x,y,selectors().slot);
+ if(grabId&&slot){slot.click();status('✅ วางภาพแล้ว • หยิบภาพต่อไปหรือกดตรวจคำตอบ')}
+ else if(grabId){status('🔄 คลายนิ้วนอกช่องวาง • ภาพจะกลับไปคลัง ลองใหม่')}
+ grabId=null;held.classList.remove('active');
+}
+function landmarksDraw(points){
+ ctx.clearRect(0,0,debug.width,debug.height);
+ const links=[[0,1],[1,2],[2,3],[3,4],[0,5],[5,6],[6,7],[7,8],[0,9],[9,10],[10,11],[11,12],[0,13],[13,14],[14,15],[15,16],[0,17],[17,18],[18,19],[19,20],[5,9],[9,13],[13,17]];
+ ctx.strokeStyle='#79ffcb';ctx.lineWidth=3;for(const [a,b] of links){ctx.beginPath();ctx.moveTo(points[a].x*debug.width,points[a].y*debug.height);ctx.lineTo(points[b].x*debug.width,points[b].y*debug.height);ctx.stroke()}
+ for(const i of [4,8]){ctx.beginPath();ctx.arc(points[i].x*debug.width,points[i].y*debug.height,9,0,Math.PI*2);ctx.fillStyle=i===4?'#ffd45c':'#ff7f90';ctx.fill()}
+}
+function handFrame(points){
+ const ix=points[8],th=points[4],root=points[5],side=points[17],rect=activeRect();
+ const w=rect.right-rect.left,h=rect.bottom-rect.top;if(w<=10||h<=10)return;
+ // Camera preview mirrored for intuitive left/right hand motion.
+ const newX=rect.left+(1-ix.x)*w,newY=rect.top+ix.y*h;
+ if(!position)position={x:newX,y:newY};else{position.x+=(newX-position.x)*.42;position.y+=(newY-position.y)*.42}
+ const x=position.x,y=position.y;pointer.style.left=x+'px';pointer.style.top=y+'px';pointer.classList.add('active');held.style.left=x+'px';held.style.top=y+'px';
+ const distance=Math.hypot(ix.x-th.x,ix.y-th.y);const palm=Math.max(.025,Math.hypot(root.x-side.x,root.y-side.y));const ratio=distance/palm;
+ const close=ratio<.50,open=ratio>.69;
+ closedCount=close?closedCount+1:0;openCount=open?openCount+1:0;
+ if(!grab&&closedCount>=2){grab=true;closedCount=0;const token=at(x,y,selectors().token);if(token)pick(token);else status('🤏 ตรวจพบการจีบแล้ว แต่เคอร์เซอร์ไม่อยู่บนบัตรภาพ • เล็งไปที่การ์ดแล้วจีบใหม่')}
+ if(grab&&openCount>=2){grab=false;openCount=0;release(x,y)}
+ pointer.classList.toggle('pinched',grab);
+ if(hover){hover.classList.remove('mp-target');hover=null}
+ if(grab){hover=at(x,y,selectors().slot);if(hover)hover.classList.add('mp-target')}
+ state(grabId?'🟡 หยิบภาพแล้ว':grab?'🟠 กำลังจีบ':'🟢 พบมือ',grabId?'grabbing':'detected',ratio.toFixed(2)+(grab?' • จีบอยู่':' • คลายนิ้ว'));
+ landmarksDraw(points);
+}
+function loop(time){
+ if(!stream||mode==='touch'||document.hidden)return;
+ frame=requestAnimationFrame(loop);
+ if(!detector||cameraVideo.readyState<2||time-lastUpdate<65||cameraVideo.currentTime===lastVideoTime)return;
+ lastUpdate=time;lastVideoTime=cameraVideo.currentTime;
+ try{const res=detector.detectForVideo(cameraVideo,performance.now());if(res.landmarks?.length){missing=0;handFrame(res.landmarks[0])}else{missing++;if(missing>5){state('⚪ ไม่พบมือ');pointer.classList.remove('active');ctx.clearRect(0,0,debug.width,debug.height);if(missing===6)status('✋ ยังไม่พบมือ • ยื่นมือในระยะ 30–70 ซม. ให้เห็นครบทุกนิ้ว และเพิ่มแสงสว่าง')}}}
+ catch(e){console.warn('MediaPipe frame:',e);status('⚠️ เกิดข้อผิดพลาดการตรวจจับ: '+reason(e),true);cancelAnimationFrame(frame)}
+}
+selects.forEach(el=>el.addEventListener('change',()=>start(el.value,Number(el.dataset.stage),false)));
+document.querySelectorAll('.mp-test').forEach(b=>b.addEventListener('click',()=>start('touch',Number(b.closest('.mp-controls').querySelector('.mp-mode').dataset.stage),true)));
+document.querySelectorAll('.mp-stop').forEach(b=>b.addEventListener('click',()=>start('touch',stage)));
+const priorGo=go;go=function(i){if(i!==1&&i!==4){if(stream){stop();mode='touch';sync();status('ปิดกล้องแล้วเมื่อออกจากด่านที่ใช้ Hand Tracking')}}else{stage=i;resetGesture()}priorGo(i)};
+window.addEventListener('pagehide',stop);
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&stream){stop();mode='touch';sync();status('กล้องหยุดทำงานเมื่อสลับออกจากเกม')}});
+sync();
+})();
+</script>
+</body></html>
